@@ -1,8 +1,25 @@
 ﻿# The script of the game goes in this file.
 
+# Game Story Draft points:
+
+# SCENE 00: Intro
+# Intro to game, explaining it is a mouse only mechanic as it is a Ren'py novel, click to continue story along.
+
+# SCENE 01: Pizza Time
+# 2. Nairda and Strudle both get a pizza and head home for some TV
+
+# SCENE 03: Tony starts the letter
+# Wake up, Tony has to write a letter to Nairda to thank HIM for buying Tony a PC, but it becomes a jumbled mess of recursion as Tony
+# doesn't know how to use a PC very well.
+
+# SCENE 04: Nairda tries to read it at the end, it's very confusing.
+
+# Side plot: Nairda and Strudle doing normal frog things, Tony is avoiding them until the letter is complete
+
+
 # The game starts here.
 label start:
-
+    # SCENE 00: Introduction
     scene apartmentdoor
     show tony n
     tony "The theme is... Recursion! And the limitation is... Mouse Only! Click on the page to move the... story along?"
@@ -31,13 +48,13 @@ label start:
     tony "T-thank you! I've never been great at anything before..."
     scene apartmentdoor
     "(And with that, welcome to)"
-    "(Nairda Nun and the PC)"
+    "(Nairda Nun... and the PC?)"
 
-
+    # SCENE 01: Pizza Time
     scene pizza
     show nun n at right
     show snun n at left
-    "(The famous Peckish Pizza Shop is reopened and offering 50% off!)"
+    "(The famous Peckish Pizza Shop is reopened and offering 50 percent off!)"
     "(Who could say no to that? Nairda couldn't that's for sure!)"
     nun "One large veggie pizza please, Fry the pizza guy!"
     snun "Could you add some flies to it? If you caught any in the zapper of course"
@@ -50,8 +67,76 @@ label start:
     show nun n at right
     show snun sad at left
     snun "Ah... I guess it could be an issue with health and safety. They are delicious though! For frogs at least..."
+    show fry happy
+    fry "I've never tried them personally, I have a bit of a phobia for foods I can't fillet"
+    fry "I'm pretty sure there aren't hands or knives small or sharp enough to do that to most bugs so I skip them altogether"
+    scene pizza
+    show nun n at right
+    show snun sad at left
+    show fry sad
+    fry "My father always said there's nothing wrong with eatin' bugs but I've alwayss been picky with my food"
+    scene pizza
+    show fry shy
+    fry "I've never been picky with pizza though"
+    "(Fry whispers under his breath)"
+    fry "G'damn I love pizza..."
+    "(He recomposes himself)"
+    fry "Anyhow! Here's your pizza!"
+    "(Fry hands the pizza over the counter)"
+    scene pizza
+    show nun happy at right
+    show snun happy at left
+    nun "Thanks, Fry the pizza guy!"
+    "(Leaving the pizza shop Nairda whispers to himself)"
+    nun "G'damn I love pizza so much..."
+    show snun confused at left
+    snun "Hm? Did you say something?"
+    nun "Oh nothing, the pizza smells good is all"
+
+    scene pizza
+    "(Nairda and Strudle head on home to eat their large veggie pizza without a side of flies)"
+    "(And snuggle up onto the sofa to watch their favourite guilty pleasure show on the TV)"
+
+# Maybe a choice for which to watch and a silly sentence about each depending on choice
+    "('Pie or die' The guessing game about 'is it pie? or an explosive?' | 'Desperate Frog Lives' | 'The Capybara Royals' | )"
+
+    # SCENE 03: Tony starts the letter
+    scene apartmentdoor
+    "(Tony stands outside of the apartment doors thinking of how to thank Nairda for their recent gift of a computer)"
+    show tony confused
+    tony "Uh-hmm... T-thank you for the PeeCee"
+    tony "Personal cee?"
+    show tony shy
+    tony "Personal Computer!"
+    tony "Or P C for short!"
+    "(Tony fumbles)"
+    show tony happy
+    tony "The P C (*whispering* 'for short') was a great gift and I have looked up several log videos!"
+    show tony n
+    tony "They are videos of water being blocked by tree logs"
+    show tony happy
+    tony "Spruce is wonferful this time of year!"
+    "(He tidies up his shirt)"
+    show tony n
+    tony "Perfect! I'll just say that!"
+    "(His neighbour's door starts to unlock and someone is turning the door handle)"
+    show tony sad
+    tony "OR I'LL SAY IT LATER!!!"
+    scene apartmentdoor
+    "(Tony runs back into his apartment, slamming the door shut, hiding from Nairda Nun)"
+    show nun n at right
+    nun "What was all of that ruckus?"
+    "(They look around and see the empty apartment hallway, so still and quiet you could hear a pin drop a mile away)"
+    nun "Guess it was nothing..."
+    scene apartmentdoor
+    "(He closes the door again)"
+
+    scene tonys
+    show tony n
+    tony "That was close!"
 
 
+# The letter will add on to each other so that in the end it's your letter you wrote
 
 
 
