@@ -1,33 +1,39 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
-
 # The game starts here.
-
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    scene apartmentdoor
+    show tony n
+    tony "The theme is... Recursion! And the limitation is... Mouse Only! Click on the page to move the... story along?"
+    "(Tony is mumbling words to himself)"
+    scene apartmentdoor
+    show tony confused
+    tony "Wait? So I just...?"
+    gamedev "Yes, you just need to read the teleprompter like you were literally just doing..."
+    tony "Ok! I can do that!"
+    gamedev "..."
+    "(Tony has never made it through an entire introduction without some form of distraction)"
+    "(The game developer smiles as genuinely as they can)"
+    gamedev "I believe in you, Tony!"
+    scene apartmentdoor
+    show tony shy
+    tony "This is for the game jam, Mini Jam 197: Recursion"
+    scene apartmentdoor
+    show tony happy
+    tony "A story where my BEST FRIEND..."
+    "(The teleprompter does not specify their relationship)"
+    tony "...Nairda the frog detective, solves ALL THE CRIMES!"
+    "(Tony isn't reading the teleprompter. The game developer is putting their hands over their face.)"
+    "(At this point the introduction is already a lost cause...)"
+    gamedev "Thank you, Tony! You did great."
+    show tony shy
+    tony "T-thank you! I've never been great at anything before..."
+    scene apartmentdoor
+    "(And with that, welcome to)"
+    "(Nairda Nun and the PC)"
 
-    scene bg room
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
-
     return
