@@ -111,7 +111,7 @@ label start:
     tony "Or P C for short!"
     "(Tony fumbles)"
     show tony happy
-    tony "The P C (*whispering* 'for short') was a great write and I have looked up several log videos!"
+    tony "The P C (*whispering* 'for short') was a great gift and I have looked up several log videos!"
     show tony n
     tony "They are videos of water being blocked by tree logs"
     show tony happy
@@ -134,80 +134,195 @@ label start:
     scene tonys
     show tony sad
     tony "That was close!"
+    scene tonys
+    show tony n
+    "(Tony's apartment is very cluttered)"
+    "(As a beaver he has the uncontrollable instinct to stop the flow of running water)"
+    "(Sound proofing the walls of the apartment... putting piles of papers and sticks up every wall surface and into every conceivable orifice and corner...)"
+    "(Water wouldn't dare flow through these rooms!)"
+    "(Or at least that's what Tony tells himself)"
+    scene tonys
+    show tony sad at right
+    tony "How do I thank Nairda for the Personal Computer?"
+    tony "(*whispering to himself*) P C for short"
+    scene tonys
+    show tony shy at right
+    tony "What if I USE it?!?"
+    "(Tony turns on the PC and asks the ever so popular 'Waterfowl Waterfowl Stay' search engine for advice)"
+    pcresult "Thanking a friend for a present is easy! Read '300 Ways to thank your friend' now!"
+    "(Tony opens the link, overwhelmed with the amount of advice he chooses to only read the first suggestion and just do that.)"
+    pcresult "Number 1: Write your friend a letter! A letter can show how you really fee..."
+    tony "OK that's enough reading! I'll write a letter to Nairda!"
+    "(Tony asks the 'Waterfowl Waterfowl Stay' search engine how to write a letter with a Personal Computer (PC for short))"
+    pcresult "There's plenty of free open-source writing programs on the interweb."
+    "(There's so many options Tony once again chooses the first one)"
 
-# QUESTION: Tony writes
-    "Help Tony write his letter"
+# QUESTION: Do you want a lore refresher?
+    pcresult "Download?"
     menu:
-        "To Nairda,":
-            jump LL1
-        "Dearest BEST friend,":
-            jump LL2
+        "Download Open Workplace":
+            jump downloadopenworkplace
 
-label L1:
-# The letter will add on to each other so that in the end it's your letter you wrote
-    pc "To Nairda,"
+        "Don't Download Open Workplace":
+            jump dontdownloadopenworkplace
 
-    jump LL1
 
-label L2:
-    pc "Dearest BEST friend,"
 
-    jump LL2
+label downloadopenworkplace:
+    $ onpc = onpc +5  # Writing it on the Personal Computer (PC for short)
+    play sound "audio/yes.mp3"
+    pcresult "Boop Beep Boop Boop Beep Boop"
+    pcresult "Download Complete. Opening program now."
+    "(A new page opens on Open Workplace, all ready for Tony to write his letter.)"
+    jump letterwrite
 
-label LL1:
-    "Yo LL1"
-    jump testtest
+label dontdownloadopenworkplace:
+    $ onpc = onpc -1  # Writing it by hand for some reason
+    play sound "audio/no.mp3"
+    tony "I'll hand write it instead!"
+    "(Tony gets the bright idea to write the letter by hand instead)"
+    "(Grabbing some paper from the crevices of his walls and pulling out a pen he had stuffed into the floorboards, Tony is all ready to write his letter.)"
+    jump letterwrite
 
-label LL2:
-    "Yo LL2"
-    jump testtest
 
-label testtest:
-"(Next line tester)"
+label letterwrite:
+    "(Stretching his fingers out in front of him, he prepares to write a thank you note to Nairda)"
+    "(A thank you note for the Personal Computer (PC for short))"
+
+    "(What should it say?)"
 menu:
-    "Test A":
-        $ write = "testa"
-        pc "AAAAAAAAAAAAAAAAA!"
-    "Test B":
-        $ write = "testb"
-        pc "BBBBBBBBBBBBBBBBBB!"
-    "Test C":
-        $ write = "testc"
-        pc "CCCCCCCCCCCCCCCCCC!"
+    "My dearest friend,":
+        $ write1 = "w1a"
 
-"(Next NEXT line tester)"
+    "To Nairda,":
+        $ write1 = "w1b"
+
+    "To my BEST friend, Nairda!":
+        $ write1 = "w1c"
+
+
+"(Good start, good start...)"
 menu:
-    "Test D":
-        $ write2 = "testd"
-        pc "DDDDDDDDDDDDDDD!"
-    "Test B":
-        $ write2 = "teste"
-        pc "EEEEEEEEE!"
-    "Test F":
-        $ write2 = "testf"
-        pc "FFFFFFFFFFFFFF!"
+    "Thank you for the Personal Computer (P C for short)":
+        $ write2 = "w2a"
+
+    "The Personal Computer (P C for short) really is something":
+        $ write2 = "w2b"
+
+    "Did you know the Personal Computer is known as P C for short?":
+        $ write2 = "w2c"
+
+"(Looking at the Personal Computer (PC for short) for inspiration, Tony continues...)"
+menu:
+    "The P C (for short) was a great gift and I have already looked up several log videos!":
+        $ write3 = "w3a"
+
+    "There is a searching engine that answers all of my questions with some accuracy!":
+        $ write3 = "w3b"
+
+    "There are so many single otters and bears in my area wishing to meet me!":
+        $ write3 = "w3c"
+
+"(Looking at the Personal Computer (PC for short) for inspiration, Tony continues...)"
+menu:
+    "How many words does it take to fill up one interweb? I must be getting close to it now":
+        $ write3 = "w3a"
+
+    "Have you seen the interweb? It is like a phone for your hands!":
+        $ write3 = "w3b"
+
+    "So many news articles say conflicting things, my favourite part is the fighting in the comments":
+        $ write3 = "w3c"
+
+menu:
+    "Do not search up toilet logs... it does not show you logs you can use to stop the flow of water in the toilet.":
+        $ write4 = "w4a"
+
+    "And what is the video on the about people just doing normal things like stretching or cleaning themselves? So many likes for such mundane content!":
+        $ write4 = "w4b"
+
+    "If there was a better gift to recieve, I have yet to receive it!":
+        $ write4 = "w4c"
+
+"(Looking at the Personal Computer (PC for short) for inspiration, Tony continues...)"
+menu:
+    "Yours Sincerely, tony.":
+        $ write5 = "w5a"
+
+    "With Regards, Tony.":
+        $ write5 = "w5b"
+
+    "ok bye bye":
+        $ write5 = "w5c"
+
+"(Tony is happy with his letter)"
+jump which_end
+
+# SCENE XX - ENDINGS ENDINGS ENDINGS ENDINGS
+# This checks which ending Nairda gets:
+# Letter written on Personal Computer (PC for short)
+label which_end:
+    "(It was time to send it! Well, to post it under the door of Nairda's apartment)"
+    if onpc >= 5:
+        jump bypc_end
+# Letter written by hand
+    elif onpc <= 1:
+        jump byhand_end
 
 
+label bypc_end:
+    "(Nairda gets a neatly typed letter in the post, opening it and having a read)"
+    jump endings
 
-"Nairda opens the letter"
-if write == "testa":
-    nun "A test A!"
-if write == "testb":
-    nun "Ah Test B!"
-if write == "testc":
-    nun "Ah Test C!"
+label byhand_end:
+    "(Nairda gets a weirdly shaped, slightly moist, envelope in the post.)"
+    "(Opening it up, there's scribblings only a madman could decipher)"
+    "(Putting on his reading glasses, he does his best...)"
+    jump endings
+
+
+label endings:
+
+if write1 == "w1a":
+    l "My dearest friend,"
+if write1 == "w1b":
+    l "To Nairda,"
+if write1 == "w1c":
+    l "To my BEST friend, Nairda!"
 
 
 "It continues"
-if write2 == "testd":
-    nun "A test D!"
-if write2 == "teste":
-    nun "Ah Test E!"
-if write2 == "testf":
-    nun "Ah Test F!"
+if write2 == "w2a":
+    l "Thank you for the Personal Computer (P C for short)"
+if write2 == "w2b":
+    l "The Personal Computer (P C for short) really is something"
+if write2 == "w2c":
+    l "Did you know the Personal Computer is known as P C for short?"
 
 
+if write3 == "w3a":
+    l "The P C (for short) was a great gift and I have already looked up several log videos!"
+if write3 == "w3b":
+    l "There is a searching engine that answers all of my questions with some accuracy!"
+if write3 == "w3c":
+    l "There are so many single otters and bears in my area wishing to meet me!"
 
+
+if write4 == "w4a":
+    l "Do not search up toilet logs... it does not show you logs you can use to stop the flow of water in the toilet."
+    l "I have seen terrible things."
+if write4 == "w4b":
+    l "And what is the video on the about people just doing normal things like stretching or cleaning themselves? So many likes for such mundane content!"
+if write4 == "w4c":
+    l "If there was a better gift to recieve, I have yet to receive it!"
+
+if write5 == "w5a":
+    l "Yours sincerely, Tony."
+if write5 == "w5b":
+    l "With Regards, Tony."
+if write5 == "w5c":
+    l "Ok bye bye"
+    "(The letter is not signed by anyone, but Nairda has an inkling it was from his neighbour, Tony.)"
 
 
     # This ends the game.
