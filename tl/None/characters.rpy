@@ -18,6 +18,7 @@ define snun = Character("Strudle", color="#FF0000")#Red
 
 # Apartment neighbour/s, Next door neighbour
 define tony = Character("Tony", color="#FF0000")#Red
+define pc = Character("(Typing onto the PC)", color="FFFFFF")
 
 # Side Character, Fry the Pizza Guy
 define fry = Character("Fry", color="#DBA87F") #Pizza crust colour

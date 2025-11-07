@@ -102,7 +102,7 @@ label start:
 
     # SCENE 03: Tony starts the letter
     scene apartmentdoor
-    "(Tony stands outside of the apartment doors thinking of how to thank Nairda for their recent gift of a computer)"
+    "(Tony stands outside of the apartment doors thinking of how to thank Nairda for their recent write of a computer)"
     show tony confused
     tony "Uh-hmm... T-thank you for the PeeCee"
     tony "Personal cee?"
@@ -111,7 +111,7 @@ label start:
     tony "Or P C for short!"
     "(Tony fumbles)"
     show tony happy
-    tony "The P C (*whispering* 'for short') was a great gift and I have looked up several log videos!"
+    tony "The P C (*whispering* 'for short') was a great write and I have looked up several log videos!"
     show tony n
     tony "They are videos of water being blocked by tree logs"
     show tony happy
@@ -132,11 +132,81 @@ label start:
     "(He closes the door again)"
 
     scene tonys
-    show tony n
+    show tony sad
     tony "That was close!"
 
+# QUESTION: Tony writes
+    "Help Tony write his letter"
+    menu:
+        "To Nairda,":
+            jump LL1
+        "Dearest BEST friend,":
+            jump LL2
 
+label L1:
 # The letter will add on to each other so that in the end it's your letter you wrote
+    pc "To Nairda,"
+
+    jump LL1
+
+label L2:
+    pc "Dearest BEST friend,"
+
+    jump LL2
+
+label LL1:
+    "Yo LL1"
+    jump testtest
+
+label LL2:
+    "Yo LL2"
+    jump testtest
+
+label testtest:
+"(Next line tester)"
+menu:
+    "Test A":
+        $ write = "testa"
+        pc "AAAAAAAAAAAAAAAAA!"
+    "Test B":
+        $ write = "testb"
+        pc "BBBBBBBBBBBBBBBBBB!"
+    "Test C":
+        $ write = "testc"
+        pc "CCCCCCCCCCCCCCCCCC!"
+
+"(Next NEXT line tester)"
+menu:
+    "Test D":
+        $ write2 = "testd"
+        pc "DDDDDDDDDDDDDDD!"
+    "Test B":
+        $ write2 = "teste"
+        pc "EEEEEEEEE!"
+    "Test F":
+        $ write2 = "testf"
+        pc "FFFFFFFFFFFFFF!"
+
+
+
+"Nairda opens the letter"
+if write == "testa":
+    nun "A test A!"
+if write == "testb":
+    nun "Ah Test B!"
+if write == "testc":
+    nun "Ah Test C!"
+
+
+"It continues"
+if write2 == "testd":
+    nun "A test D!"
+if write2 == "teste":
+    nun "Ah Test E!"
+if write2 == "testf":
+    nun "Ah Test F!"
+
+
 
 
 
