@@ -34,6 +34,26 @@ label start:
     "(Nairda Nun and the PC)"
 
 
+    scene pizza
+    show nun n at right
+    show snun n at left
+    "(The famous Peckish Pizza Shop is reopened and offering 50% off!)"
+    "(Who could say no to that? Nairda couldn't that's for sure!)"
+    nun "One large veggie pizza please, Fry the pizza guy!"
+    snun "Could you add some flies to it? If you caught any in the zapper of course"
+    "(Fry stops in his tracks and thinks for a moment)"
+    scene pizza
+    show fry n
+    fry "I don't think I'm legally allowed to due to health and safety... I could look up if there's any store bought flies I could buy for
+    next time though?"
+    scene pizza
+    show nun n at right
+    show snun sad at left
+    snun "Ah... I guess it could be an issue with health and safety. They are delicious though! For frogs at least..."
+
+
+
+
 
     # This ends the game.
     return

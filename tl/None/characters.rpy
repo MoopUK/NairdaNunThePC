@@ -14,7 +14,7 @@ define gamedev = Character("Game Dev")
 define nun = Character("Nairda Nun", color="#99C68E") #nun, frog green
 
 # Main Character, Husband of Nun
-define hubby = Character("Strudle", color="#FF0000")#Red
+define snun = Character("Strudle", color="#FF0000")#Red
 
 # Apartment neighbour/s, Next door neighbour
 define tony = Character("Tony", color="#FF0000")#Red
