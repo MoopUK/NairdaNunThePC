@@ -9,7 +9,7 @@
 # How these themes/limitations were used:
 # Ren'py is already mouse only for controls, and I tried to think of how to do *recursion* but
 # not based on computing, went for "Linguistic Recursion", got a bit confused by it, I think it kind of worked out...
-﻿
+
 # Game Story Draft points:
 
 # SCENE 00: Intro
@@ -174,21 +174,21 @@ label start:
     scene apartmentdoor
     "(He closes the door again)"
 
-    scene tonys
+    scene tonyinterior
     show tony sad
     tony "That was close!"
-    scene tonys
+    scene tonyinterior
     show tony n
     "(Tony's apartment is very cluttered)"
     "(As a beaver he has the uncontrollable instinct to stop the flow of running water)"
     "(Sound proofing the walls of the apartment... putting piles of papers and sticks up every wall surface and into every conceivable orifice and corner...)"
     "(Water wouldn't dare flow through these rooms!)"
     "(Or at least that's what Tony tells himself)"
-    scene tonys
+    scene tonyinterior
     show tony sad at right
     tony "How do I thank Nairda for the Personal Computer?"
     tony "(*whispering to himself*) P C for short"
-    scene tonys
+    scene tonyinterior
     show tony shy at right
     tony "What if I USE it?!?"
     "(Tony turns on the PC and asks the ever so popular 'Waterfowl Waterfowl Stay' search engine for advice)"
@@ -303,13 +303,14 @@ menu:
     "Shove it under the door?":
         jump underdoor
 
-    "Go to the post office and post it personally yourself?":
+    "Go to a post box and post it personally yourself?":
         jump postit
 
 
 label underdoor:
     tony "Posting it would be silly... And the door method is fun and it's free!"
     tony "like pouring river water in your socks!"
+    scene apartmentdoor
     "(Tony posts the letter under the front door to Nairda and Strudle's apartment)"
     "(Then runs back inside of his own apartment with glee.)"
     jump which_end
@@ -319,8 +320,10 @@ label postit:
     "(Tony holds the letter in his hands)"
     "(Staring into it like his life depended on this decision!)"
     tony "I'M POSTING IT!"
-    "(Tony shuffles out of the door to make his way to the post office)"
-    "(The closest post office is several miles away)"
+    "(Tony finds some old, unused stamps and places one on the top corner, along with writing Nairda's address on the front)"
+    "(He then shuffles out of the door to make his way to a post box)"
+    scene postoffice
+    "(The closest post box is several miles away)"
     "(But it is worth it for his BEST FRIEND, Nairda.)"
     jump which_end
 
@@ -337,19 +340,25 @@ label which_end:
 
 
 label bypc_end:
+    scene nuninterior
+    show nun n
     "(Nairda gets a neatly typed letter, opening it and having a read...)"
     jump endings
 
 label byhand_end:
+    scene nuninterior
+    show nun confused
     "(Nairda gets a weirdly shaped, slightly moist, letter.)"
     "(Opening it up, there's scribblings only a madman could decipher,)"
     "(Could it be related to his most recent case?)"
+    scene nuninterior
+    show nun n
     "(Putting on his reading glasses, he does his best...)"
     jump endings
 
 
 label endings:
-
+scene nuninterior
 if write1 == "w1a":
     l "My dearest friend,"
 if write1 == "w1b":
@@ -403,6 +412,7 @@ if write5 == "w5c":
     jump end
 
 label end:
+    scene tonyinterior
     gamedev "Tony has a way to go with writing letters, I asked him to do a letter using 'Linguistic Recursion',"
     gamedev "But he was confused and said something about having 48 hours left to finish something..."
     gamedev "And that new things are confusing so the best he can do is one long, run-on sentence that seems like it's never ending."
@@ -416,14 +426,14 @@ label end:
             jump badtony
 
 label goodtony:
-    scene tonys
+    scene tonyinterior
     show tony happy
     tony "YESS! Now Tony has done TWO things right!"
     "(The End... for real this time)"
     return
 
 label badtony:
-    scene tonys
+    scene tonyinterior
     show tony sad
     tony "Oh... I did try my best..."
     "(You feel eyes like daggers eminating towards you from behind the screen)"

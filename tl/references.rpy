@@ -20,6 +20,15 @@
 # - Possibly editing this image of empty shelves to use as Tony's apartment interior
 ## https://www.pexels.com/photo/white-wooden-shelf-271722/
 
+# - Tony's apartment interior
+## https://pixabay.com/photos/books-literature-library-bookstore-2211342/
+
+# - Nun Apartment interior
+# https://pixabay.com/photos/kitchen-kitchenette-apartment-room-2094722/
+
+# - Post Office (post bos)
+# https://pixabay.com/photos/mailbox-england-red-letters-4174289/
+
 #______________________________________________________________________________
 # AUDIO AUDIO AUDIO
 #______________________________________________________________________________
