@@ -269,19 +269,19 @@ menu:
     "there is also this thing called a searching engine that answers all of my questions with some accuracy,":
         $ write3 = "w3b"
 
-    "and why are there so many single otters and bears in my area wishing to meet me,":
+    "I wonder why are there so many single otters and bears in my area wishing to meet me,":
         $ write3 = "w3c"
 
 "(The sentence just keeps on growing…)"
 menu:
     "how many words does it take to fill up one interweb as I must be getting close to it now,":
-        $ write3 = "w3a"
+        $ write6 = "w6a"
 
-    "have you seen the interweb, it is like a phone for your hands,":
-        $ write3 = "w3b"
+    "have you seen the interweb, it is like a library for your eyes,":
+        $ write6 = "w6b"
 
     "so many news articles say conflicting things, my favourite part is the fighting in the comments,":
-        $ write3 = "w3c"
+        $ write6 = "w6c"
 
 menu:
     "also do not search up toilet logs on the Personal Computer (P C for short)... it does not show you logs you can use to stop the flow of water in the toilet… I have seen terrible things…":
@@ -390,23 +390,31 @@ if write2 == "w2b":
 if write2 == "w2c":
     l "Did you know the Personal Computer is known as P C for short,"
 
+
+if write6 == "w6a":
+    l "how many words does it take to fill up one interweb as I must be getting close to it now,"
+if write6 == "w6b":
+    l "have you seen the interweb, it is like a library for your eyes,"
+if write6 == "w6c":
+    l "so many news articles say conflicting things, my favourite part is the fighting in the comments,"
+
+
 if write3 == "w3a":
     l "The P C (for short) was a great gift and I have already looked up several log videos..."
 if write3 == "w3b":
     l "There is a searching engine that answers all of my questions with some accuracy,"
 if write3 == "w3c":
-    l "and why are there so many single otters and bears in my area wishing to meet me,"
+    l "I wonder why are there so many single otters and bears in my area wishing to meet me,"
 
 
 if write4 == "w4a":
     l "do not search up toilet logs... it does not show you logs you can use to stop the flow of water in the toilet..."
     l "I have seen terrible things..."
-
 if write4 == "w4b":
     l "and what is the video on the about people just doing normal things like stretching or cleaning themselves, so many likes for such mundane content,"
-
 if write4 == "w4c":
     l "if there was a better gift to receive, I have yet to receive it, unless I did receive it but I have since forgotten as that is something I do sometimes,"
+
 
 if write5 == "w5a":
     l "Yours sincerely, Tony."
@@ -425,6 +433,7 @@ if write5 == "w5c":
     "(The letter is not signed by anyone, but Nairda has an inkling it was from his neighbour, Tony.)"
     "(The End.)"
     jump end
+
 
 label end:
     scene tonyinterior
