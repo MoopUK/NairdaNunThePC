@@ -31,22 +31,38 @@
 
 #______________________________________________________________________________
 # AUDIO AUDIO AUDIO
+# - With a lack of musical talents, the BGM and other sounds are still the same from royalty free samples
 #______________________________________________________________________________
 
-# - With a lack of musical talents, the BGM and other sounds are still the same from the royalty free samples from freesound.org
-
-# - BGM Main Theme (I lost the original Pixabay audio link to this, but I have found another reference to it here):
+# - BGM Main Theme in all games (I lost the original Pixabay audio link to this, but I have found another reference to it here):
 ##  Chillout Cafe, Soothing Sparrow. Album: The Chinese Chillout Lounge (Instrumental), Release Date 2022-05-26
 ## https://www.aha-music.com/0c399a2df23d520260d5c545875973d2
 
+# - Tony Theme BGM
+# The calm theme
+# by BloodPixelHero -- https://freesound.org/s/518917/ -- License: Attribution 4.0
+
+# - Opening BGM
+# Adventure theme #8
+# by BloodPixelHero -- https://freesound.org/s/658869/ -- License: Attribution 4.0
+
 # - NO sound:
-## https://freesound.org/people/Bertrof/sounds/131657/
+## Game Sound Wrong.wav
+# by Bertrof -- https://freesound.org/s/131657/ -- License: Attribution 3.0
 
 # - YES sound:
-## https://freesound.org/people/CogFireStudios/sounds/531509/
+## Soft Dreamy Beep (Alternative Version)
+# by CogFireStudios -- https://freesound.org/s/531509/ -- License: Creative Commons 0
 
 # - Toilet Flush sound:
-## https://freesound.org/people/InMotionAudio/sounds/657443/
+## WATRPlmb_ToiletFlush_Fill01_InMotionAudio_FREESampleSunday.wav
+# by InMotionAudio -- https://freesound.org/s/657443/ -- License: Creative Commons 0
+
+# Door Slam
+# Kouda_Ha
+
+# Door Unlock
+# Kouda_Ha
 
 
 #______________________________________________________________________________

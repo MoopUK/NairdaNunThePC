@@ -1,16 +1,17 @@
-# Nairda Nun and the PC
+# GAME INFO ___________________________________________________________________
+# TITLE: Nairda Nun and the PC
+# AUTHOR: Kouda_Ha
 
 # This game was made for the Mini Jam 197: Recursion.
-
 # Game Jam theme: Recursion
-
 # Game Jam limitation: Mouse only
 
 # How these themes/limitations were used:
 # Ren'py is already mouse only for controls, and I tried to think of how to do *recursion* but
-# not based on computing, went for "Linguistic Recursion", got a bit confused by it, I think it kind of worked out...
+# not based on computing, went for "Linguistic Recursion", got a bit confused by it,
+# I think it kind of worked out...
 
-# Game Story Draft points:
+# Game Story Contents:
 
 # SCENE 00: Intro
 # Intro to game, explaining it is a mouse only mechanic as it is a Ren'py novel, click to continue story along.
@@ -24,10 +25,12 @@
 
 # SCENE 03: Nairda gets his letter and Endings
 # Nairda tries to read it at the end, it's very confusing.
+#______________________________________________________________________________
 
 # The game starts here.
 label start:
     # SCENE 00: Introduction
+    play music "audio/openingbgm.wav"
     scene apartmentdoor
     show tony n
     tony "The theme is... Recursion! And the limitation is... Mouse Only! Click on the page to move the... story along?"
@@ -66,6 +69,7 @@ label start:
 
     # SCENE 01: Pizza Time
     scene pizza
+    play music "audio/cafe.mp3"
     "(The famous Peckish Pizza Shop is reopened and offering 50 percent off!)"
     "(Who could say no to that? Nairda couldn't that's for sure!)"
     show nun n at right
@@ -115,8 +119,11 @@ label start:
     show snun confused at left
     nun "Oh nothing, the pizza smells good is all"
 
-    scene pizza
+    scene apartmentdoor
     "(Nairda and Strudle head on home to eat their large veggie pizza without a side of flies)"
+    scene nuninterior
+    show nun happy at right
+    show snun happy at left
     "(And snuggle up onto the sofa to watch their favourite guilty pleasure show on the TV)"
 
 # QUESTION: Donwload the program or no?
@@ -124,7 +131,8 @@ label start:
     menu:
         "Pie or die":
             "(The guessing gameshow about pies)"
-            "('Is it pie? or an explosive?')"
+            "(Is it pie?)"
+            "(Or an explosive?)"
             "(Contestants better guess correctly...)"
             "(Or they might lose more than just a TV Show competition!)"
             "(Kind of a dark show... people wonder why it'd been greenlit in the first place)"
@@ -143,6 +151,7 @@ label start:
 
     # SCENE 02: Tony starts the letter
     scene apartmentdoor
+    play music "audio/openingbgm.wav"
     "(Tony stands outside of the apartment doors thinking of how to thank Nairda for their recent gift of a second-hand computer)"
     "(Welcoming him to the new age of... online!)"
     show tony confused
@@ -161,10 +170,13 @@ label start:
     "(He tidies up his suspenders)"
     show tony n
     tony "Perfect! I'll just say that!"
+    play sound "audio/doorunlock.mp3"
     "(His neighbour's door starts to unlock and someone is turning the door handle)"
     show tony sad
     tony "OR I'LL SAY IT LATER!!!"
     scene apartmentdoor
+    stop music
+    play sound "audio/doorslam.mp3"
     "(Tony runs back into his apartment, slamming the door shut, hiding from Nairda Nun)"
     show nun confused at right
     nun "What was all of that ruckus?"
@@ -175,6 +187,7 @@ label start:
     "(He closes the door again)"
 
     scene tonyinterior
+    play music "audio/tonybgm.wav"
     show tony sad
     tony "That was close!"
     scene tonyinterior
@@ -211,7 +224,6 @@ label start:
 
 label downloadopenworkplace:
     $ onpc = onpc +5  # Writing it on the Personal Computer (PC for short)
-    play sound "audio/yes.mp3"
     pcresult "Boop Beep Boop Boop Beep Boop"
     pcresult "Download Complete. Opening program now."
     "(A new page opens on Open Workplace, all ready for Tony to write his letter.)"
@@ -219,7 +231,6 @@ label downloadopenworkplace:
 
 label dontdownloadopenworkplace:
     $ onpc = onpc -1  # Writing it by hand for some reason
-    play sound "audio/no.mp3"
     tony "I'll hand write it instead!"
     "(Tony gets the bright idea to write the letter by hand instead)"
     "(Grabbing some paper from the crevices of his walls and pulling out a pen he had stuffed into the floorboards, Tony is all ready to write his letter.)"
@@ -312,6 +323,7 @@ label underdoor:
     tony "like pouring river water in your socks!"
     scene apartmentdoor
     "(Tony posts the letter under the front door to Nairda and Strudle's apartment)"
+    play sound "audio/doorslam.mp3"
     "(Then runs back inside of his own apartment with glee.)"
     jump which_end
 
@@ -321,6 +333,7 @@ label postit:
     "(Staring into it like his life depended on this decision!)"
     tony "I'M POSTING IT!"
     "(Tony finds some old, unused stamps and places one on the top corner, along with writing Nairda's address on the front)"
+    play sound "audio/doorslam.mp3"
     "(He then shuffles out of the door to make his way to a post box)"
     scene postoffice
     "(The closest post box is several miles away)"
@@ -341,12 +354,14 @@ label which_end:
 
 label bypc_end:
     scene nuninterior
+    play music "audio/cafe.mp3"
     show nun n
     "(Nairda gets a neatly typed letter, opening it and having a read...)"
     jump endings
 
 label byhand_end:
     scene nuninterior
+    play music "audio/cafe.mp3"
     show nun confused
     "(Nairda gets a weirdly shaped, slightly moist, letter.)"
     "(Opening it up, there's scribblings only a madman could decipher,)"
@@ -413,6 +428,7 @@ if write5 == "w5c":
 
 label end:
     scene tonyinterior
+    play music "audio/tonybgm.wav"
     gamedev "Tony has a way to go with writing letters, I asked him to do a letter using 'Linguistic Recursion',"
     gamedev "But he was confused and said something about having 48 hours left to finish something..."
     gamedev "And that new things are confusing so the best he can do is one long, run-on sentence that seems like it's never ending."
@@ -420,9 +436,10 @@ label end:
     tony "Did I do good?"
     menu:
         "You did good, Tony!":
+            play sound "audio/yes.mp3"
             jump goodtony
-
         "No.":
+            play sound "audio/no.mp3"
             jump badtony
 
 label goodtony:
