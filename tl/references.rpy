@@ -14,10 +14,11 @@
 # - Character Sprites (ALL):
 ## All character sprites are made from photographs of physical toys owned by Moop UK/Kouda_Ha and then edited with
 # the open-source software 'Krita' (https://krita.org) to give them different emotional expressions.
-
 ## Characters are dominantly made from Sylvanian Families toys. Most of the clothing is original Sylvanian Families clothing,
 # and any other clothes were physically made by Moop UK/Kouda_Ha.
 
+# - Possibly editing this image of empty shelves to use as Tony's apartment interior
+## https://www.pexels.com/photo/white-wooden-shelf-271722/
 
 #______________________________________________________________________________
 # AUDIO AUDIO AUDIO

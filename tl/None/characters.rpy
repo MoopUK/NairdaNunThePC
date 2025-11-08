@@ -2,8 +2,8 @@
 
 # Kouda_Ha's premade Character sprites for all Nairda Nun games.
 
-# Defaulting answers to 0 at start of game, choices matter for good and/or bad endings.
-default correct = 0
+# Defaulting answers to 0 at start of game, choices matter for different endings.
+default onpc = 0
 
 # Character List
 
@@ -14,10 +14,13 @@ define gamedev = Character("Game Dev")
 define nun = Character("Nairda Nun", color="#99C68E") #nun, frog green
 
 # Main Character, Husband of Nun
-define hubby = Character("Strudle", color="#FF0000")#Red
+define snun = Character("Strudle", color="#FF0000")#Red
 
 # Apartment neighbour/s, Next door neighbour
 define tony = Character("Tony", color="#FF0000")#Red
+define pc = Character("(Typing onto the PC)", color="FFFFFF")
+define pcresult = Character("Search Result", color="FFFFFF")
+define l = Character("The Letter", color="#d9d9d9")
 
 # Side Character, Fry the Pizza Guy
 define fry = Character("Fry", color="#DBA87F") #Pizza crust colour
