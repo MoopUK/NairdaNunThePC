@@ -204,6 +204,7 @@ label start:
     scene tonyinterior
     show tony shy at right
     tony "What if I USE it?!?"
+    show PC PC at left
     "(Tony turns on the PC and asks the ever so popular 'Waterfowl Waterfowl Stay' search engine for advice)"
     pcresult "Thanking a friend for a present is easy! Read '300 Ways to thank your friend' now!"
     "(Tony opens the link, overwhelmed with the amount of advice he chooses to only read the first suggestion and just do that.)"
@@ -224,6 +225,8 @@ label start:
 
 label downloadopenworkplace:
     $ onpc = onpc +5  # Writing it on the Personal Computer (PC for short)
+    scene tonyinterior
+    show PC PC
     pcresult "Boop Beep Boop Boop Beep Boop"
     pcresult "Download Complete. Opening program now."
     "(A new page opens on Open Workplace, all ready for Tony to write his letter.)"
@@ -231,6 +234,8 @@ label downloadopenworkplace:
 
 label dontdownloadopenworkplace:
     $ onpc = onpc -1  # Writing it by hand for some reason
+    scene tonyinterior
+    show letter letter
     tony "I'll hand write it instead!"
     "(Tony gets the bright idea to write the letter by hand instead)"
     "(Grabbing some paper from the crevices of his walls and pulling out a pen he had stuffed into the floorboards, Tony is all ready to write his letter.)"
@@ -306,6 +311,7 @@ menu:
 
 
 # SCENE 03: Nairda gets his letter and Endings
+scene tonyinterior
 "(Tony is happy with his letter and scrunches it into an envelope)"
 "(It was time to send it! Well, to post it under the door of Nairda's apartment)"
 tony "No need to pay postage when it's your next door neighbour!"
@@ -357,23 +363,27 @@ label bypc_end:
     play music "audio/cafe.mp3"
     show nun n
     "(Nairda gets a neatly typed letter, opening it and having a read...)"
+    show letter letter at left
     jump endings
 
 label byhand_end:
     scene nuninterior
     play music "audio/cafe.mp3"
-    show nun confused
+    show nun confused at right
     "(Nairda gets a weirdly shaped, slightly moist, letter.)"
+    show letter letter at left
     "(Opening it up, there's scribblings only a madman could decipher,)"
     "(Could it be related to his most recent case?)"
     scene nuninterior
-    show nun n
+    show nun n at right
+    show letter letter at left
     "(Putting on his reading glasses, he does his best...)"
     jump endings
 
 
 label endings:
 scene nuninterior
+show letter letter
 if write1 == "w1a":
     l "My dearest friend,"
 if write1 == "w1b":

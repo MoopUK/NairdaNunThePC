@@ -116,5 +116,9 @@ image fry shy:
 
 # MISC ITEMS - All game scenes are in 1280 x 720, resize accordingly
 image PC PC:
-    "pc"
+    "pcforshort"
+    zoom 0.8
+
+image letter letter:
+    "letters"
     zoom 0.5
