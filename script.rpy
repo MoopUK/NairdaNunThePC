@@ -1,21 +1,29 @@
-﻿# The script of the game goes in this file.
+# Nairda Nun and the PC
 
+# This game was made for the Mini Jam 197: Recursion.
+
+# Game Jam theme: Recursion
+
+# Game Jam limitation: Mouse only
+
+# How these themes/limitations were used:
+# Ren'py is already mouse only for controls, and I tried to think of how to do *recursion* but
+# not based on computing, went for "Linguistic Recursion", got a bit confused by it, I think it kind of worked out...
+﻿
 # Game Story Draft points:
 
 # SCENE 00: Intro
 # Intro to game, explaining it is a mouse only mechanic as it is a Ren'py novel, click to continue story along.
 
 # SCENE 01: Pizza Time
-# 2. Nairda and Strudle both get a pizza and head home for some TV
+# Nairda and Strudle both get a pizza and head home for some TV
 
-# SCENE 03: Tony starts the letter
-# Wake up, Tony has to write a letter to Nairda to thank HIM for buying Tony a PC, but it becomes a jumbled mess of recursion as Tony
+# SCENE 02: Tony starts the letter
+# Tony has to write a letter to Nairda to thank HIM for buying Tony a PC, but it becomes a jumbled mess of recursion as Tony
 # doesn't know how to use a PC very well.
 
-# SCENE 04: Nairda tries to read it at the end, it's very confusing.
-
-# Side plot: Nairda and Strudle doing normal frog things, Tony is avoiding them until the letter is complete
-
+# SCENE 03: Nairda gets his letter and Endings
+# Nairda tries to read it at the end, it's very confusing.
 
 # The game starts here.
 label start:
@@ -46,39 +54,50 @@ label start:
     gamedev "Thank you, Tony! You did great."
     show tony shy
     tony "T-thank you! I've never been great at anything before..."
+    gamedev "And you remember what 'Linguistic Recursion' is, right? For the game?"
+    scene apartmentdoor
+    show tony confused
+    tony "O-o"
+    tony "O-of course!"
+    gamedev "Ok, great! Let's get started!"
     scene apartmentdoor
     "(And with that, welcome to)"
     "(Nairda Nun... and the PC?)"
 
     # SCENE 01: Pizza Time
     scene pizza
-    show nun n at right
-    show snun n at left
     "(The famous Peckish Pizza Shop is reopened and offering 50 percent off!)"
     "(Who could say no to that? Nairda couldn't that's for sure!)"
+    show nun n at right
+    show snun n at left
     nun "One large veggie pizza please, Fry the pizza guy!"
     snun "Could you add some flies to it? If you caught any in the zapper of course"
     "(Fry stops in his tracks and thinks for a moment)"
     scene pizza
-    show fry n
+    show fry confused
     fry "I don't think I'm legally allowed to due to health and safety... I could look up if there's any store bought flies I could buy for
     next time though?"
     scene pizza
-    show nun n at right
+    show nun confused at right
     show snun sad at left
     snun "Ah... I guess it could be an issue with health and safety. They are delicious though! For frogs at least..."
+    scene pizza
+    show nun n at right
+    show snun n at left
     show fry happy
     fry "I've never tried them personally, I have a bit of a phobia for foods I can't fillet"
     fry "I'm pretty sure there aren't hands or knives small or sharp enough to do that to most bugs so I skip them altogether"
     scene pizza
     show nun n at right
-    show snun sad at left
+    show snun n at left
     show fry sad
     fry "My father always said there's nothing wrong with eatin' bugs but I've always been picky with my food"
     scene pizza
     show fry shy
     fry "I've never been picky with pizza though!"
     "(Fry whispers under his breath)"
+    scene pizza
+    show fry happy
     fry "G'damn I love pizza..."
     "(He recomposes himself)"
     fry "Anyhow! Here's your pizza!"
@@ -91,16 +110,38 @@ label start:
     nun "G'damn I love pizza so much..."
     show snun confused at left
     snun "Hm? Did you say something?"
+    scene pizza
+    show nun shy at right
+    show snun confused at left
     nun "Oh nothing, the pizza smells good is all"
 
     scene pizza
     "(Nairda and Strudle head on home to eat their large veggie pizza without a side of flies)"
     "(And snuggle up onto the sofa to watch their favourite guilty pleasure show on the TV)"
 
-# Maybe a choice for which to watch and a silly sentence about each depending on choice
-    "('Pie or die' The guessing game about 'is it pie? or an explosive?' | 'Desperate Frog Lives' | 'The Capybara Royals' | )"
+# QUESTION: Donwload the program or no?
+    "What do they watch?"
+    menu:
+        "Pie or die":
+            "(The guessing gameshow about pies)"
+            "('Is it pie? or an explosive?')"
+            "(Contestants better guess correctly...)"
+            "(Or they might lose more than just a TV Show competition!)"
+            "(Kind of a dark show... people wonder why it'd been greenlit in the first place)"
 
-    # SCENE 03: Tony starts the letter
+        "Desperate Frog Lives":
+            "(Nothing to do with housewives, it is literally about the desperate attempts of survival
+            by frogs in weird social situations.)"
+            "(The winners of the show get a prize of at least 12)"
+            "(That's a lot.)"
+        "The Capybara Royals":
+            "(A stupid program about the excessively rich doing stupid things with their money thinking
+            people watch this show to admire their beautiful and lavish lifestyle.)"
+            "(People watch to rage bait themselves and have a rant about how the money could be used to
+            save millions of lives instead of stupid table lamps and extended swimming pools...)"
+            "(Ironically making the royals even richer and making the show seem popular for the wrong reasons.)"
+
+    # SCENE 02: Tony starts the letter
     scene apartmentdoor
     "(Tony stands outside of the apartment doors thinking of how to thank Nairda for their recent gift of a second-hand computer)"
     "(Welcoming him to the new age of... online!)"
@@ -159,7 +200,7 @@ label start:
     pcresult "There's plenty of free open-source writing programs on the interweb."
     "(There's so many options Tony once again chooses the first one)"
 
-# QUESTION: Do you want a lore refresher?
+# QUESTION: Donwload the program or no?
     pcresult "Download?"
     menu:
         "Download Open Workplace":
@@ -167,8 +208,6 @@ label start:
 
         "Don't Download Open Workplace":
             jump dontdownloadopenworkplace
-
-
 
 label downloadopenworkplace:
     $ onpc = onpc +5  # Writing it on the Personal Computer (PC for short)
@@ -254,6 +293,8 @@ menu:
     "ok bye bye then":
         $ write5 = "w5c"
 
+
+# SCENE 03: Nairda gets his letter and Endings
 "(Tony is happy with his letter and scrunches it into an envelope)"
 "(It was time to send it! Well, to post it under the door of Nairda's apartment)"
 tony "No need to pay postage when it's your next door neighbour!"
@@ -286,9 +327,8 @@ label postit:
 
 # SCENE XX - ENDINGS ENDINGS ENDINGS ENDINGS
 # This checks which ending Nairda gets:
-# Letter written on Personal Computer (PC for short)
 label which_end:
-
+# Letter written on Personal Computer (PC for short)
     if onpc >= 5:
         jump bypc_end
 # Letter written by hand
@@ -346,10 +386,14 @@ if write4 == "w4c":
 
 if write5 == "w5a":
     l "Yours sincerely, Tony."
+    "(Nairda didn't expect a letter from Tony, he's always so introverted that Nairda's surprised he'd write one)"
+    "(It's not overly clear but Nairda thinks it's a thank you for the computer.)"
     "(The End.)"
     jump end
 if write5 == "w5b":
     l "how do I end this it's Tony?"
+    "(Nairda didn't expect a letter of thanks from Tony, if this was a thank you letter that is...)"
+    "(It's not overly clear but Nairda thinks it's a thank you?)"
     "(The End.)"
     jump end
 if write5 == "w5c":
@@ -363,7 +407,7 @@ label end:
     gamedev "But he was confused and said something about having 48 hours left to finish something..."
     gamedev "And that new things are confusing so the best he can do is one long, run-on sentence that seems like it's never ending."
     show tony n
-    tony "Did I go good?"
+    tony "Did I do good?"
     menu:
         "You did good, Tony!":
             jump goodtony
@@ -372,18 +416,18 @@ label end:
             jump badtony
 
 label goodtony:
-    scene apartmentdoor
+    scene tonys
     show tony happy
     tony "YESS! Now Tony has done TWO things right!"
     "(The End... for real this time)"
     return
 
 label badtony:
-    scene apartmentdoor
+    scene tonys
     show tony sad
     tony "Oh... I did try my best..."
-    "(You feel eyes like daggers eminating from the screen)"
-    gamedev "You monster..."
+    "(You feel eyes like daggers eminating towards you from behind the screen)"
+    gamedev "You're a monster..."
     "(The End... for real this time)"
     return
 
