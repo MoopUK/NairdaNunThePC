@@ -74,10 +74,10 @@ label start:
     show nun n at right
     show snun sad at left
     show fry sad
-    fry "My father always said there's nothing wrong with eatin' bugs but I've alwayss been picky with my food"
+    fry "My father always said there's nothing wrong with eatin' bugs but I've always been picky with my food"
     scene pizza
     show fry shy
-    fry "I've never been picky with pizza though"
+    fry "I've never been picky with pizza though!"
     "(Fry whispers under his breath)"
     fry "G'damn I love pizza..."
     "(He recomposes himself)"
@@ -102,7 +102,8 @@ label start:
 
     # SCENE 03: Tony starts the letter
     scene apartmentdoor
-    "(Tony stands outside of the apartment doors thinking of how to thank Nairda for their recent write of a computer)"
+    "(Tony stands outside of the apartment doors thinking of how to thank Nairda for their recent gift of a second-hand computer)"
+    "(Welcoming him to the new age of... online!)"
     show tony confused
     tony "Uh-hmm... T-thank you for the PeeCee"
     tony "Personal cee?"
@@ -115,8 +116,8 @@ label start:
     show tony n
     tony "They are videos of water being blocked by tree logs"
     show tony happy
-    tony "Spruce is wonferful this time of year!"
-    "(He tidies up his shirt)"
+    tony "Spruce is wonderful this time of year!"
+    "(He tidies up his suspenders)"
     show tony n
     tony "Perfect! I'll just say that!"
     "(His neighbour's door starts to unlock and someone is turning the door handle)"
@@ -124,9 +125,10 @@ label start:
     tony "OR I'LL SAY IT LATER!!!"
     scene apartmentdoor
     "(Tony runs back into his apartment, slamming the door shut, hiding from Nairda Nun)"
-    show nun n at right
+    show nun confused at right
     nun "What was all of that ruckus?"
     "(They look around and see the empty apartment hallway, so still and quiet you could hear a pin drop a mile away)"
+    show nun n at right
     nun "Guess it was nothing..."
     scene apartmentdoor
     "(He closes the door again)"
@@ -193,76 +195,100 @@ label letterwrite:
 menu:
     "My dearest friend,":
         $ write1 = "w1a"
-
     "To Nairda,":
         $ write1 = "w1b"
-
     "To my BEST friend, Nairda!":
         $ write1 = "w1c"
 
-
 "(Good start, good start...)"
 menu:
-    "Thank you for the Personal Computer (P C for short)":
+    "Thank you for the Personal Computer (P C for short),":
         $ write2 = "w2a"
 
-    "The Personal Computer (P C for short) really is something":
+    "The Personal Computer (P C for short) really is something,":
         $ write2 = "w2b"
 
-    "Did you know the Personal Computer is known as P C for short?":
+    "Did you know the Personal Computer is known as P C for short,":
         $ write2 = "w2c"
 
 "(Looking at the Personal Computer (PC for short) for inspiration, Tony continues...)"
 menu:
-    "The P C (for short) was a great gift and I have already looked up several log videos!":
+    "the P C (for short) was a great gift and I have already looked up several log videos…":
         $ write3 = "w3a"
 
-    "There is a searching engine that answers all of my questions with some accuracy!":
+    "there is also this thing called a searching engine that answers all of my questions with some accuracy,":
         $ write3 = "w3b"
 
-    "There are so many single otters and bears in my area wishing to meet me!":
+    "and why are there so many single otters and bears in my area wishing to meet me,":
         $ write3 = "w3c"
 
-"(Looking at the Personal Computer (PC for short) for inspiration, Tony continues...)"
+"(The sentence just keeps on growing…)"
 menu:
-    "How many words does it take to fill up one interweb? I must be getting close to it now":
+    "how many words does it take to fill up one interweb as I must be getting close to it now,":
         $ write3 = "w3a"
 
-    "Have you seen the interweb? It is like a phone for your hands!":
+    "have you seen the interweb, it is like a phone for your hands,":
         $ write3 = "w3b"
 
-    "So many news articles say conflicting things, my favourite part is the fighting in the comments":
+    "so many news articles say conflicting things, my favourite part is the fighting in the comments,":
         $ write3 = "w3c"
 
 menu:
-    "Do not search up toilet logs... it does not show you logs you can use to stop the flow of water in the toilet.":
+    "also do not search up toilet logs on the Personal Computer (P C for short)... it does not show you logs you can use to stop the flow of water in the toilet… I have seen terrible things…":
         $ write4 = "w4a"
 
-    "And what is the video on the about people just doing normal things like stretching or cleaning themselves? So many likes for such mundane content!":
+    "and what is the video on the about people just doing normal things like stretching or cleaning themselves, so many likes for such mundane content,":
         $ write4 = "w4b"
 
-    "If there was a better gift to recieve, I have yet to receive it!":
+    "if there was a better gift to receive, I have yet to receive it, unless I did receive it but I have since forgotten as that is something I do sometimes,":
         $ write4 = "w4c"
 
-"(Looking at the Personal Computer (PC for short) for inspiration, Tony continues...)"
+"(He takes a deep breath and thinks of how to end his masterpiece)"
 menu:
-    "Yours Sincerely, tony.":
+    "Yours Sincerely, Tony.":
         $ write5 = "w5a"
 
-    "With Regards, Tony.":
+    "how do I end this it’s Tony?":
         $ write5 = "w5b"
 
-    "ok bye bye":
+    "ok bye bye then":
         $ write5 = "w5c"
 
-"(Tony is happy with his letter)"
-jump which_end
+"(Tony is happy with his letter and scrunches it into an envelope)"
+"(It was time to send it! Well, to post it under the door of Nairda's apartment)"
+tony "No need to pay postage when it's your next door neighbour!"
+tony "Or should I post it officially?"
+menu:
+    "Shove it under the door?":
+        jump underdoor
+
+    "Go to the post office and post it personally yourself?":
+        jump postit
+
+
+label underdoor:
+    tony "Posting it would be silly... And the door method is fun and it's free!"
+    tony "like pouring river water in your socks!"
+    "(Tony posts the letter under the front door to Nairda and Strudle's apartment)"
+    "(Then runs back inside of his own apartment with glee.)"
+    jump which_end
+
+label postit:
+    tony "I would prefer it looked official..."
+    "(Tony holds the letter in his hands)"
+    "(Staring into it like his life depended on this decision!)"
+    tony "I'M POSTING IT!"
+    "(Tony shuffles out of the door to make his way to the post office)"
+    "(The closest post office is several miles away)"
+    "(But it is worth it for his BEST FRIEND, Nairda.)"
+    jump which_end
+
 
 # SCENE XX - ENDINGS ENDINGS ENDINGS ENDINGS
 # This checks which ending Nairda gets:
 # Letter written on Personal Computer (PC for short)
 label which_end:
-    "(It was time to send it! Well, to post it under the door of Nairda's apartment)"
+
     if onpc >= 5:
         jump bypc_end
 # Letter written by hand
@@ -271,12 +297,13 @@ label which_end:
 
 
 label bypc_end:
-    "(Nairda gets a neatly typed letter in the post, opening it and having a read)"
+    "(Nairda gets a neatly typed letter, opening it and having a read...)"
     jump endings
 
 label byhand_end:
-    "(Nairda gets a weirdly shaped, slightly moist, envelope in the post.)"
-    "(Opening it up, there's scribblings only a madman could decipher)"
+    "(Nairda gets a weirdly shaped, slightly moist, letter.)"
+    "(Opening it up, there's scribblings only a madman could decipher,)"
+    "(Could it be related to his most recent case?)"
     "(Putting on his reading glasses, he does his best...)"
     jump endings
 
@@ -293,37 +320,72 @@ if write1 == "w1c":
 
 "It continues"
 if write2 == "w2a":
-    l "Thank you for the Personal Computer (P C for short)"
+    l "Thank you for the Personal Computer (P C for short),"
 if write2 == "w2b":
-    l "The Personal Computer (P C for short) really is something"
+    l "The Personal Computer (P C for short) really is something,"
 if write2 == "w2c":
-    l "Did you know the Personal Computer is known as P C for short?"
-
+    l "Did you know the Personal Computer is known as P C for short,"
 
 if write3 == "w3a":
-    l "The P C (for short) was a great gift and I have already looked up several log videos!"
+    l "The P C (for short) was a great gift and I have already looked up several log videos..."
 if write3 == "w3b":
-    l "There is a searching engine that answers all of my questions with some accuracy!"
+    l "There is a searching engine that answers all of my questions with some accuracy,"
 if write3 == "w3c":
-    l "There are so many single otters and bears in my area wishing to meet me!"
+    l "and why are there so many single otters and bears in my area wishing to meet me,"
 
 
 if write4 == "w4a":
-    l "Do not search up toilet logs... it does not show you logs you can use to stop the flow of water in the toilet."
-    l "I have seen terrible things."
+    l "do not search up toilet logs... it does not show you logs you can use to stop the flow of water in the toilet..."
+    l "I have seen terrible things..."
+
 if write4 == "w4b":
-    l "And what is the video on the about people just doing normal things like stretching or cleaning themselves? So many likes for such mundane content!"
+    l "and what is the video on the about people just doing normal things like stretching or cleaning themselves, so many likes for such mundane content,"
+
 if write4 == "w4c":
-    l "If there was a better gift to recieve, I have yet to receive it!"
+    l "if there was a better gift to receive, I have yet to receive it, unless I did receive it but I have since forgotten as that is something I do sometimes,"
 
 if write5 == "w5a":
     l "Yours sincerely, Tony."
+    "(The End.)"
+    jump end
 if write5 == "w5b":
-    l "With Regards, Tony."
+    l "how do I end this it's Tony?"
+    "(The End.)"
+    jump end
 if write5 == "w5c":
-    l "Ok bye bye"
+    l "Ok bye bye then"
     "(The letter is not signed by anyone, but Nairda has an inkling it was from his neighbour, Tony.)"
+    "(The End.)"
+    jump end
 
+label end:
+    gamedev "Tony has a way to go with writing letters, I asked him to do a letter using 'Linguistic Recursion',"
+    gamedev "But he was confused and said something about having 48 hours left to finish something..."
+    gamedev "And that new things are confusing so the best he can do is one long, run-on sentence that seems like it's never ending."
+    show tony n
+    tony "Did I go good?"
+    menu:
+        "You did good, Tony!":
+            jump goodtony
+
+        "No.":
+            jump badtony
+
+label goodtony:
+    scene apartmentdoor
+    show tony happy
+    tony "YESS! Now Tony has done TWO things right!"
+    "(The End... for real this time)"
+    return
+
+label badtony:
+    scene apartmentdoor
+    show tony sad
+    tony "Oh... I did try my best..."
+    "(You feel eyes like daggers eminating from the screen)"
+    gamedev "You monster..."
+    "(The End... for real this time)"
+    return
 
     # This ends the game.
     return
