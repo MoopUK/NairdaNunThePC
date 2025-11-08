@@ -1,6 +1,5 @@
 # References for all game assets used (belonging to Moop UK or outside of Moop UK)
 
-
 #______________________________________________________________________________
 # IMAGES IMAGES IMAGES IMAGES
 #______________________________________________________________________________
@@ -28,6 +27,12 @@
 
 # - Post Office (post bos)
 # https://pixabay.com/photos/mailbox-england-red-letters-4174289/
+
+# - Letters
+# https://pixabay.com/illustrations/letter-job-envelope-paper-mail-8052497/
+
+# - Personal Computer (PC for short)
+# https://pixabay.com/vectors/monitor-computer-screen-crt-31241/
 
 #______________________________________________________________________________
 # AUDIO AUDIO AUDIO
@@ -59,10 +64,10 @@
 # by InMotionAudio -- https://freesound.org/s/657443/ -- License: Creative Commons 0
 
 # Door Slam
-# Kouda_Ha
+# Sound by Kouda_Ha
 
 # Door Unlock
-# Kouda_Ha
+# Sound by Kouda_Ha
 
 
 #______________________________________________________________________________
