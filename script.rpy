@@ -410,9 +410,9 @@ if write6 == "w6c":
 
 
 if write3 == "w3a":
-    l "The P C (for short) was a great gift and I have already looked up several log videos..."
+    l "the P C (for short) was a great gift and I have already looked up several log videos..."
 if write3 == "w3b":
-    l "There is a searching engine that answers all of my questions with some accuracy,"
+    l "there is a searching engine that answers all of my questions with some accuracy,"
 if write3 == "w3c":
     l "I wonder why are there so many single otters and bears in my area wishing to meet me,"
 
